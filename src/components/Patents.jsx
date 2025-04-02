@@ -19,7 +19,7 @@ const Patents = () => {
        {/* Main Content */}
        <main className="w-full min-h-screen px-4 md:px-10 lg:pl-64 flex flex-col items-start bg-gray-50 justify-start text-left">
         <div className="max-w-4xl rounded-lg p-6 md:p-10">
-          <h2 className="text-2xl font-bold text-gray-800 mt-7 mb-4"> Patents</h2>
+          <h2 className="text-2xl font-bold text-gray-800 mt-7 mb-4"> PATENTS</h2>
           <ul className="text-gray-700 space-y-3">
           <li><span className="text-blue-500">★</span>Granted Patent on 'System and Method for Motion Analysis and Feedback for Amendment of Human Action.' (Patent No.: 201621029482, Registered on: 30/08/2016)</li>
           <li><span className="text-blue-500">★</span>Granted Patent 'System and method for automated evaluation of multimodal content.' (Patent No.: 202221060608, Registered on: 11/11/2022 Granted)</li>

@@ -6,10 +6,9 @@ import Gallery from "./components/Gallery";
 import Awards from "./components/Awards";
 import Research from "./components/Research";
 import Position from "./components/Position";
-import Project from "./components/Project";
+import Bookchapters from "./components/Bookchapters";
 import Resources from "./components/Resources";
-import Academic from "./components/Academic";
-import Publications from "./components/Publications";
+import Conferencepublications from "./components/Conferencepublications";
 import Talks from "./components/Talks";
 import Patents from "./components/Patents";
 import Contact from "./components/Contact";
@@ -27,10 +26,9 @@ function App() {
           <Route path="/awards" element={<Awards />} />
           <Route path="/research" element={<Research />} />
           <Route path="/positions" element={<Position />} />
-          <Route path="/projects" element={<Project />} />
+          <Route path="/Bookchapters" element={<Bookchapters/>} />
           <Route path="/resources" element={<Resources />} />
-          <Route path="/academic" element={<Academic />} />
-          <Route path="/publications" element={<Publications />} />
+          <Route path="/Conferencepublications" element={<Conferencepublications />} />
           <Route path="/talks" element={<Talks />} />
           <Route path="/patents" element={<Patents />} />
           <Route path="/contact" element={<Contact />} />

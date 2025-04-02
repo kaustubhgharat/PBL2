@@ -48,29 +48,33 @@ const Navbar = () => {
                   <Link to="/awards" className="hover:text-gray-500">Awards</Link>
                 </li>
                 <hr />
-                <li className="flex items-center space-x-3">
-                  <FaSearch />
-                  <Link to="/research" className="hover:text-gray-500">Research</Link>
-                </li>
-                <hr />
+                
                 <li className="flex items-center space-x-3">
                   <FaBriefcase />
                   <Link to="/positions" className="hover:text-gray-500">Positions</Link>
                 </li>
                 <hr />
-                <li className="flex items-center space-x-3">
-                  <FaProjectDiagram />
-                  <Link to="/projects" className="hover:text-gray-500">Projects</Link>
-                </li>
-                <hr />
+                
                 <li className="flex items-center space-x-3">
                   <FaBook />
                   <Link to="/resources" className="hover:text-gray-500">Resources</Link>
                 </li>
                 <hr />
                 <li className="flex items-center space-x-3">
-                  <FaFileAlt />
-                  <Link to="/publications" className="hover:text-gray-500">Publications</Link>
+                <FaFileAlt />
+                  <Link to="/Bookchapters" className="hover:text-gray-500">
+                  Book Chapters</Link>
+                </li>
+                <hr />
+                <li className="flex items-center space-x-3">
+                  <FaSearch />
+                  <Link to="/research" className="hover:text-gray-500">Research</Link>
+                </li>
+                <hr />
+                <li className="flex items-center space-x-3">
+                 
+                  <FaProjectDiagram />
+                  <Link to="/Conferencepublications" className="hover:text-gray-500">Conference</Link>
                 </li>
                 <hr />
                 <li className="flex items-center space-x-3">

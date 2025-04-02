@@ -18,7 +18,7 @@ const About = () => {
       {/* Main Content */}
       <main className="w-full min-h-screen px-4 md:px-10 lg:pl-64 flex flex-col items-start bg-gray-50 justify-start text-left">
         <div className="max-w-4xl rounded-lg p-6 md:p-10">
-          <h2 className="text-2xl font-bold text-gray-800 mt-7 mb-4">About</h2>
+          <h2 className="text-2xl font-bold text-gray-800 mt-7 mb-4">ABOUT</h2>
           <ul className="text-gray-700 space-y-3">
             <li><span className="text-blue-500">★</span> I received the M.E. and Ph.D. degrees in Computer Engineering from Pune Institute of Computer Technology (PICT), Savitribai Phule Pune University, Pune, India, in 2004 and 2017, respectively.</li>
             <li><span className="text-blue-500">★</span> I am currently the Head and an Associate Professor in the Department of Computer Engineering at Pune Institute of Computer Technology, Pune, India.</li>
