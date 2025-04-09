@@ -1,12 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { FaBars, FaTimes } from "react-icons/fa";
-import {
-  FaHome, FaUser, FaImages, FaAward, FaSearch, FaBriefcase,
-  FaProjectDiagram, FaBook, FaFileAlt, FaChalkboardTeacher,
-  FaUsers, FaEnvelope
-} from "react-icons/fa";
-import AdminImg from "../assets/adminimg.jpg";
 import Navbar from "./Navbar";
 
 const Gallery = () => {

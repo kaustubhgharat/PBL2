@@ -6,13 +6,13 @@ const Talks = () => {
   const [talks, setTalks] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/talks")
+    fetch("https://pbl-2-backend.vercel.app/talks")
       .then(res => res.json())
       .then(data => setTalks(data));
   }, []);
 
   const handleDelete = async (id) => {
-    await fetch(`http://localhost:3000/talks/${id}`, { method: 'DELETE' });
+    await fetch(`https://pbl-2-backend.vercel.app/talks/${id}`, { method: 'DELETE' });
     setTalks((prev) => prev.filter(t => t._id !== id));
   };
 

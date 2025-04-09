@@ -6,7 +6,7 @@ import {
   FaProjectDiagram, FaBook, FaFileAlt, FaChalkboardTeacher,
   FaUsers, FaEnvelope
 } from "react-icons/fa";
-import AdminImg from "../assets/adminimg.jpg";
+
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
