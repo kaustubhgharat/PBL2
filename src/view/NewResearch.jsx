@@ -8,7 +8,7 @@ const NewResearch = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await fetch("http://localhost:3000/research", {
+    await fetch("https://pbl-2-backend.vercel.app/research", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ listing: { description } }),
