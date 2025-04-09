@@ -8,7 +8,7 @@ const NewAward = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await fetch("https://pbl-2.vercel.app//awards", {
+    await fetch("https://pbl-2.vercel.app/awards", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ listing: { description } }),

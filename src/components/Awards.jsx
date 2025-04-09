@@ -6,14 +6,14 @@ const Awards = () => {
   const [awards, setAwards] = useState([]);
 
   useEffect(() => {
-    fetch("https://pbl-2.vercel.app//awards")
+    fetch("https://pbl-2.vercel.app/awards")
       .then((res) => res.json())
       .then((data) => setAwards(data))
       .catch((err) => console.error("Error fetching awards:", err));
   }, []);
 
   const handleDelete = async (id) => {
-    await fetch(`https://pbl-2.vercel.app//awards/${id}`, {
+    await fetch(`https://pbl-2.vercel.app/awards/${id}`, {
       method: "DELETE",
     });
     setAwards(awards.filter((item) => item._id !== id));
