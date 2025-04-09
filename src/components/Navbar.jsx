@@ -49,17 +49,17 @@ const Navbar = () => {
                 </li>
                 <hr />
                 
-                <li className="flex items-center space-x-3">
+                {/* <li className="flex items-center space-x-3">
                   <FaBriefcase />
                   <Link to="/positions" className="hover:text-gray-500">Positions</Link>
                 </li>
-                <hr />
+                <hr /> */}
                 
-                <li className="flex items-center space-x-3">
+                {/* <li className="flex items-center space-x-3">
                   <FaBook />
                   <Link to="/resources" className="hover:text-gray-500">Resources</Link>
                 </li>
-                <hr />
+                <hr /> */}
                 <li className="flex items-center space-x-3">
                 <FaFileAlt />
                   <Link to="/Bookchapters" className="hover:text-gray-500">

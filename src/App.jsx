@@ -12,6 +12,12 @@ import Conferencepublications from "./components/Conferencepublications";
 import Talks from "./components/Talks";
 import Patents from "./components/Patents";
 import Contact from "./components/Contact";
+import Newf from "./view/Newf.jsx"
+import NewTalk from "./view/NewTalk.jsx";
+import NewConferencePublication from "./view/NewConferencePublication.jsx";
+import NewResearch from "./view/NewResearch.jsx";
+import NewAward from "./view/NewAward.jsx";
+import NewAbout from "./view/NewAbout.jsx";
 import '@fontsource/montserrat';
 import '@fontsource/montserrat/700.css';
 
@@ -22,15 +28,21 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/about/new" element={<NewAbout />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/awards" element={<Awards />} />
+          <Route path="/awards/new" element={<NewAward />} />
           <Route path="/research" element={<Research />} />
+          <Route path="/research/new" element={<NewResearch />} />
           <Route path="/positions" element={<Position />} />
-          <Route path="/Bookchapters" element={<Bookchapters/>} />
+          <Route path="/Bookchapters" element={<Bookchapters />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/Conferencepublications" element={<Conferencepublications />} />
+          <Route path="/Conferencepublications/new" element={<NewConferencePublication />} />
           <Route path="/talks" element={<Talks />} />
+          <Route path="/talks/new" element={<NewTalk />} />
           <Route path="/patents" element={<Patents />} />
+          <Route path="/patents/new" element={<Newf />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </Router>
