@@ -7,7 +7,7 @@ const About = () => {
 
   const fetchAboutItems = async () => {
     try {
-      const res = await fetch("https://pbl-2-backend.vercel.app/about");
+      const res = await fetch("https://pbl-2.vercel.app//about");
       const data = await res.json();
       setEntries(data);
     } catch (err) {
@@ -16,7 +16,7 @@ const About = () => {
   };
 
   const handleDelete = async (id) => {
-    await fetch(`https://pbl-2-backend.vercel.app/about/${id}`, {
+    await fetch(`https://pbl-2.vercel.app//about/${id}`, {
       method: "DELETE",
     });
     setEntries(entries.filter((entry) => entry._id !== id));

@@ -7,7 +7,7 @@ const Conferencepublications = () => {
 
   const handleDelete = async (id) => {
     try {
-      await fetch(`https://pbl-2-backend.vercel.app/conferencepublications/${id}`, {
+      await fetch(`https://pbl-2.vercel.app//conferencepublications/${id}`, {
         method: 'DELETE',
       });
 
@@ -18,7 +18,7 @@ const Conferencepublications = () => {
   };
 
   useEffect(() => {
-    fetch('https://pbl-2-backend.vercel.app/conferencepublications')
+    fetch('https://pbl-2.vercel.app//conferencepublications')
       .then(res => res.json())
       .then(data => {
         console.log("Fetched conference publications:");

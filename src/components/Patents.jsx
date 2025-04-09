@@ -8,7 +8,7 @@ const Patents = () => {
   const [listings, setListings] = useState([]);
   const handleDelete = async (id) => {
     try {
-      await fetch(`https://pbl-2-backend.vercel.app/patents/${id}`, {
+      await fetch(`https://pbl-2.vercel.app//patents/${id}`, {
         method: 'DELETE',
       });
 
@@ -20,7 +20,7 @@ const Patents = () => {
   };
 
   useEffect(() => {
-    fetch('https://pbl-2-backend.vercel.app/patents')
+    fetch('https://pbl-2.vercel.app//patents')
       .then(res => res.json())
       .then(data => {
         console.log("Fetched listings:");
