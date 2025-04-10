@@ -9,7 +9,7 @@ const Newf = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch("https://pbl-2.vercel.app/patents", {
+      const res = await fetch("https://pbl-2-backend.vercel.app/patents", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ listing: { description } }),

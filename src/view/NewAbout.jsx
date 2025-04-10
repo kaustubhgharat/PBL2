@@ -8,7 +8,7 @@ const NewAbout = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await fetch("https://pbl-2.vercel.app/about", {
+    await fetch("https://pbl-2-backend.vercel.app/about", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ listing: { description } }),

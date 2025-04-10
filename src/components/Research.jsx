@@ -7,7 +7,7 @@ const Research = () => {
 
   const handleDelete = async (id) => {
     try {
-      await fetch(`https://pbl-2.vercel.app/research/${id}`, {
+      await fetch(`https://pbl-2-backend.vercel.app/research/${id}`, {
         method: 'DELETE',
       });
 
@@ -18,7 +18,7 @@ const Research = () => {
   };
 
   useEffect(() => {
-    fetch("https://pbl-2.vercel.app/research")
+    fetch("https://pbl-2-backend.vercel.app/research")
       .then((res) => res.json())
       .then((data) => {
         console.log("Fetched research listings:", data);
