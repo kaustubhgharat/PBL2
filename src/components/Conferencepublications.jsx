@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 
 const Conferencepublications = () => {
   const [listings, setListings] = useState([]);
-
+  const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
   const handleDelete = async (id) => {
     try {
-      await fetch(`https://pbl-2-backend.vercel.app/conferencepublications/${id}`, {
+      await fetch(`${BACKEND_URL}/conferencepublications/${id}`, {
         method: 'DELETE',
       });
 
@@ -18,7 +18,7 @@ const Conferencepublications = () => {
   };
 
   useEffect(() => {
-    fetch('https://pbl-2-backend.vercel.app/conferencepublications')
+    fetch(`${BACKEND_URL}/conferencepublications`)
       .then(res => res.json())
       .then(data => {
         console.log("Fetched conference publications:");

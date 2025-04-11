@@ -4,10 +4,11 @@ import { Link } from "react-router-dom";
 
 const About = () => {
   const [entries, setEntries] = useState([]);
+  const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 
   const fetchAboutItems = async () => {
     try {
-      const res = await fetch("https://pbl-2-backend.vercel.app/about");
+      const res = await fetch(`${BACKEND_URL}/about`);
       const data = await res.json();
       setEntries(data);
     } catch (err) {
@@ -16,7 +17,7 @@ const About = () => {
   };
 
   const handleDelete = async (id) => {
-    await fetch(`https://pbl-2-backend.vercel.app/about/${id}`, {
+    await fetch(`${BACKEND_URL}/about/${id}`, {
       method: "DELETE",
     });
     setEntries(entries.filter((entry) => entry._id !== id));

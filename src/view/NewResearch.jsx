@@ -5,10 +5,10 @@ import Navbar from "../components/Navbar";
 const NewResearch = () => {
   const [description, setDescription] = useState("");
   const navigate = useNavigate();
-
+  const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await fetch("https://pbl-2-backend.vercel.app/research", {
+    await fetch(`${BACKEND_URL}/research`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ listing: { description } }),

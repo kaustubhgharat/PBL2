@@ -4,16 +4,16 @@ import { Link } from "react-router-dom";
 
 const Awards = () => {
   const [awards, setAwards] = useState([]);
-
+  const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
   useEffect(() => {
-    fetch("https://pbl-2-backend.vercel.app/awards")
+    fetch(`${BACKEND_URL}/awards`)
       .then((res) => res.json())
       .then((data) => setAwards(data))
       .catch((err) => console.error("Error fetching awards:", err));
   }, []);
 
   const handleDelete = async (id) => {
-    await fetch(`https://pbl-2-backend.vercel.app/awards/${id}`, {
+    await fetch(`${BACKEND_URL}/awards/${id}`, {
       method: "DELETE",
     });
     setAwards(awards.filter((item) => item._id !== id));

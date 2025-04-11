@@ -10,7 +10,7 @@ import {
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-
+  
   return (
     <div >
       {/* Hamburger Icon for Mobile */}

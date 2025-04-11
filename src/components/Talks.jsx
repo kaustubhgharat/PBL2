@@ -4,15 +4,15 @@ import { Link } from "react-router-dom";
 
 const Talks = () => {
   const [talks, setTalks] = useState([]);
-
+  const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
   useEffect(() => {
-    fetch("https://pbl-2-backend.vercel.app/talks")
+    fetch(`${BACKEND_URL}/talks`)
       .then(res => res.json())
       .then(data => setTalks(data));
   }, []);
 
   const handleDelete = async (id) => {
-    await fetch(`https://pbl-2-backend.vercel.app/talks/${id}`, { method: 'DELETE' });
+    await fetch(`${BACKEND_URL}/talks/${id}`, { method: 'DELETE' });
     setTalks((prev) => prev.filter(t => t._id !== id));
   };
 

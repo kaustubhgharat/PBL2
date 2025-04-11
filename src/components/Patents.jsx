@@ -6,9 +6,10 @@ import { useEffect, useState } from 'react';
 
 const Patents = () => {
   const [listings, setListings] = useState([]);
+  const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
   const handleDelete = async (id) => {
     try {
-      await fetch(`https://pbl-2-backend.vercel.app/patents/${id}`, {
+      await fetch(`${BACKEND_URL}/patents/${id}`, {
         method: 'DELETE',
       });
 
@@ -20,7 +21,7 @@ const Patents = () => {
   };
 
   useEffect(() => {
-    fetch('https://pbl-2-backend.vercel.app/patents')
+    fetch(`${BACKEND_URL}/patents`)
       .then(res => res.json())
       .then(data => {
         console.log("Fetched listings:");

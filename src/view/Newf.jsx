@@ -5,11 +5,11 @@ import { useNavigate } from "react-router-dom";
 const Newf = () => {
   const [description, setDescription] = useState("");
   const navigate = useNavigate(); // hook for navigation
-
+  const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch("https://pbl-2-backend.vercel.app/patents", {
+      const res = await fetch(`${BACKEND_URL}/patents`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ listing: { description } }),
