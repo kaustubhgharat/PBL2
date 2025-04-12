@@ -37,9 +37,9 @@ const BookChapters = () => {
               <h2 className="text-lg font-semibold">{book.title}</h2>
               <p className="text-sm text-gray-600"><strong>Authors:</strong> {book.authors}</p>
               <p className="text-sm text-gray-600"><strong>Chapter:</strong> {book.chapter}</p>
-              <a href={book.links.pdf} className="text-blue-500 hover:underline mt-2 inline-block">
+              {/* <a href={book.links.pdf} className="text-blue-500 hover:underline mt-2 inline-block">
                 View PDF
-              </a>
+              </a> */}
             </div>
           ))}
         </div>
