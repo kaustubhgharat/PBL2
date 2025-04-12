@@ -17,10 +17,11 @@ import NewTalk from "./view/NewTalk.jsx";
 import NewConferencePublication from "./view/NewConferencePublication.jsx";
 import NewResearch from "./view/NewResearch.jsx";
 import NewAward from "./view/NewAward.jsx";
-import LoginPage from "./components/LoginPage.jsx";
 import NewAbout from "./view/NewAbout.jsx";
 import '@fontsource/montserrat';
 import '@fontsource/montserrat/700.css';
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/clerk-react";
+import { SignInPage } from "./components/SignInPage.jsx";
 
 function App() {
   return (
@@ -28,7 +29,7 @@ function App() {
       <Router>  {/* Now using HashRouter properly */}
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/login" element={<LoginPage />} />
+          <Route path="/login" element={<SignInPage />} />
           <Route path="/about" element={<About />} />
           <Route path="/about/new" element={<NewAbout />} />
           <Route path="/gallery" element={<Gallery />} />

@@ -20,6 +20,8 @@ const Navbar = () => {
       >
         {menuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
       </button>
+
+      
       
       
       {/* Sidebar */}
@@ -91,6 +93,7 @@ const Navbar = () => {
                   <FaEnvelope />
                   <Link to="/contact" className="hover:text-gray-500">Contact</Link>
                 </li>
+                
               </ul>
             </aside>
 

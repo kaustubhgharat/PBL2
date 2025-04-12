@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
+import { SignedIn } from "@clerk/clerk-react";
 
 const Research = () => {
   const [listings, setListings] = useState([]);
@@ -39,9 +40,10 @@ const Research = () => {
           </h2>
 
           <form method="GET" action="/research/new">
-            <Link to="/research/new" className="text-blue-500 hover:underline">
+          <SignedIn><Link to="/research/new" className="text-blue-500 hover:underline">
               Add New Research
-            </Link>
+            </Link></SignedIn>
+            
           </form>
 
           <ul className="text-gray-700 space-y-3">
@@ -50,12 +52,13 @@ const Research = () => {
                 <span>
                   <span className="text-blue-500">★</span> {item.description}
                 </span>
-                <button
+                <SignedIn> <button
                   onClick={() => handleDelete(item._id)}
                   className="text-red-500 hover:text-red-700 pl-3"
                 >
                   Delete
-                </button>
+                </button></SignedIn>
+               
               </li>
             ))}
           </ul>

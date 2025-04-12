@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "./Navbar";
 import { Link } from "react-router-dom";
+import { SignedIn } from "@clerk/clerk-react";
 
 const Conferencepublications = () => {
   const [listings, setListings] = useState([]);
@@ -37,11 +38,12 @@ const Conferencepublications = () => {
           <h2 className="text-2xl font-bold text-gray-800 mt-7 mb-4">
             CONFERENCE PUBLICATIONS
           </h2>
-
+          
           <form method="GET" action="/conferencepublications/new">
-            <Link to="/conferencepublications/new" className="text-blue-500 hover:underline">
+          <SignedIn><Link to="/conferencepublications/new" className="text-blue-500 hover:underline">
               Add New Publication
-            </Link>
+            </Link></SignedIn>
+            
           </form>
 
           <ul className="text-gray-700 space-y-3">
@@ -50,12 +52,13 @@ const Conferencepublications = () => {
                 <span>
                   <span className="text-blue-500">★</span> {l.description}
                 </span>
-                <button
+                <SignedIn><button
                   onClick={() => handleDelete(l._id)}
                   className="text-red-500 hover:text-red-700 pl-3"
                 >
                   Delete
-                </button>
+                </button></SignedIn>
+                
               </li>
             ))}
           </ul>
