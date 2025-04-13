@@ -10,7 +10,7 @@ const BookChapters = () => {
   // Fetch chapters
   const fetchChapters = async () => {
     try {
-      const res = await fetch(`${BACKEND_URL}/book-chapters`);
+      const res = await fetch(`${BACKEND_URL}/Bookchapters`);
       const data = await res.json();
       setChapters(data);
     } catch (err) {
@@ -21,7 +21,7 @@ const BookChapters = () => {
   // Delete chapter
   const handleDelete = async (id) => {
     try {
-      await fetch(`${BACKEND_URL}/book-chapters/${id}`, {
+      await fetch(`${BACKEND_URL}/Bookchapters/${id}`, {
         method: "DELETE",
       });
       setChapters(chapters.filter((ch) => ch._id !== id));
@@ -42,7 +42,7 @@ const BookChapters = () => {
 
         <SignedIn>
           <Link
-            to="/book-chapters/new"
+            to="/Bookchapters/new"
             className="text-blue-500 hover:underline mb-4 inline-block"
           >
             Add New Chapter
