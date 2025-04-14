@@ -51,44 +51,47 @@ const Gallery = () => {
   return (
     <div className="flex">
       <Navbar />
-      <main className="flex flex-col ml-64 w-full min-h-screen px-4 md:px-10 py-8 bg-gray-50">
+      <main className="w-full min-h-screen px-4 md:px-10 lg:pl-64 bg-gray-50 text-left">
+        <div className="max-w-4xl mx-auto py-8">
+          <h1 className="text-2xl md:text-3xl font-semibold mb-6 text-center">Gallery</h1>
 
-        <h1 className="text-3xl font-semibold mb-6 text-center">Gallery</h1>
-        <SignedIn>{/* Local Upload */}
-        <div className="flex items-center gap-4 mb-6 justify-center">
-          <input
-            type="file"
-            accept="image/*"
-            onChange={handleFileChange}
-            className="border px-4 py-2 rounded-md w-72"
-          />
-          <button
-            onClick={handleUpload}
-            className="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700"
-          >
-            Upload Image
-          </button>
-        </div></SignedIn>
-        
-
-        {/* Gallery Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {images.map((image) => (
-            <div key={image._id} className="relative group">
-              <img
-                src={image.url}
-                alt="Gallery item"
-                className="w-full h-48 object-cover rounded-lg shadow"
-              /> 
-              <SignedIn><button
-                onClick={() => handleDeleteImage(image._id)}
-                className="absolute top-2 right-2 bg-red-600 text-white px-2 py-1 text-sm rounded opacity-0 group-hover:opacity-100 transition"
+          <SignedIn>
+            <div className="flex flex-col sm:flex-row items-center gap-4 mb-6">
+              <input
+                type="file"
+                accept="image/*"
+                onChange={handleFileChange}
+                className="border px-4 py-2 rounded-md w-full sm:w-72"
+              />
+              <button
+                onClick={handleUpload}
+                className="bg-green-600 text-white px-4 py-2 rounded-md w-full sm:w-auto hover:bg-green-700"
               >
-                Delete
-              </button></SignedIn>
-              
+                Upload Image
+              </button>
             </div>
-          ))}
+          </SignedIn>
+
+          {/* Gallery Grid */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+            {images.map((image) => (
+              <div key={image._id} className="relative group">
+                <img
+                  src={image.url}
+                  alt="Gallery item"
+                  className="w-full h-48 object-cover rounded-lg shadow"
+                />
+                <SignedIn>
+                  <button
+                    onClick={() => handleDeleteImage(image._id)}
+                    className="absolute top-2 right-2 bg-red-600 text-white px-2 py-1 text-sm rounded opacity-0 group-hover:opacity-100 transition"
+                  >
+                    Delete
+                  </button>
+                </SignedIn>
+              </div>
+            ))}
+          </div>
         </div>
       </main>
     </div>
