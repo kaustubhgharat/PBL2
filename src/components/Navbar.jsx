@@ -64,7 +64,7 @@ const Navbar = () => {
                 <hr /> */}
                 <li className="flex items-center space-x-3">
                 <FaFileAlt />
-                  <Link to="/Bookchapters" className="hover:text-gray-500">
+                  <Link to="/book-chapters" className="hover:text-gray-500">
                   Book Chapters</Link>
                 </li>
                 <hr />

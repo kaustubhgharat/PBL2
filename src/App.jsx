@@ -22,7 +22,7 @@ import '@fontsource/montserrat';
 import '@fontsource/montserrat/700.css';
 import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/clerk-react";
 import { SignInPage } from "./components/SignInPage.jsx";
-
+import NewBookChapter from "./view/NewBookChapter.jsx";
 function App() {
   return (
     <div className="bg-black">
@@ -38,7 +38,9 @@ function App() {
           <Route path="/research" element={<Research />} />
           <Route path="/research/new" element={<NewResearch />} />
           <Route path="/positions" element={<Position />} />
-          <Route path="/Bookchapters" element={<Bookchapters />} />
+          <Route path="/book-chapters" element={<Bookchapters />} />
+          
+<Route path="/book-chapters/new" element={<NewBookChapter />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/Conferencepublications" element={<Conferencepublications />} />
           <Route path="/Conferencepublications/new" element={<NewConferencePublication />} />
