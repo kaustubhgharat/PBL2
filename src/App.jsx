@@ -23,6 +23,8 @@ import '@fontsource/montserrat/700.css';
 import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/clerk-react";
 import { SignInPage } from "./components/SignInPage.jsx";
 import NewBookChapter from "./view/NewBookChapter.jsx";
+import PhdStudents from "./components/PhdStudents.jsx";
+import NewPhdStudent from "./view/NewPhdStudent.jsx";
 function App() {
   return (
     <div className="bg-black">
@@ -33,13 +35,15 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/about/new" element={<NewAbout />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/phdstudents" element={<PhdStudents />} />
+          <Route path="/phdstudents/new" element={<NewPhdStudent />} />
           <Route path="/awards" element={<Awards />} />
           <Route path="/awards/new" element={<NewAward />} />
           <Route path="/research" element={<Research />} />
           <Route path="/research/new" element={<NewResearch />} />
           <Route path="/positions" element={<Position />} />
           <Route path="/book-chapters" element={<Bookchapters />} />
-          
+
 <Route path="/book-chapters/new" element={<NewBookChapter />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/Conferencepublications" element={<Conferencepublications />} />

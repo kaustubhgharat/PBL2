@@ -90,6 +90,11 @@ const Navbar = () => {
                 </li>
                 <hr />
                 <li className="flex items-center space-x-3">
+                  <FaUsers />
+                  <Link to="/phdstudents" className="hover:text-gray-500">PhdStudents</Link>
+                </li>
+                <hr />
+                <li className="flex items-center space-x-3">
                   <FaEnvelope />
                   <Link to="/contact" className="hover:text-gray-500">Contact</Link>
                 </li>
