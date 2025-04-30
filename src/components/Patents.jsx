@@ -40,22 +40,25 @@ const Patents = () => {
         <div className="max-w-4xl rounded-lg p-6 md:p-10">
           <h2 className="text-2xl font-bold text-gray-800 mt-7 mb-4"> PATENTS</h2>
           <form method="GET" action="/patents/new" >
-          <SignedIn><Link to="/patents/new" className="text-blue-500 hover:underline">Add New Patent</Link></SignedIn>
+            <SignedIn><Link to="/patents/new" className="text-blue-500 hover:underline">Add New Patent</Link></SignedIn>
 
-            
+
           </form>
 
           <ul className="text-gray-700 space-y-3">
             {listings.map((l) => (
               <li key={l._id} className="flex justify-between items-center">
                 <span><span className="text-blue-500">★</span> {l.description}</span>
-                
-                <SignedIn><button
-                  onClick={() => handleDelete(l._id)}
-                  className="text-red-500 hover:text-red-700 pl-3"
-                >
-                  Delete
-                </button></SignedIn>
+
+                <SignedIn>
+                  {/* <Link to={`/patents/edit/${l._id}`} className="text-green-600 hover:underline">Edit     </Link> */}
+                  <button
+                    onClick={() => handleDelete(l._id)}
+                    className="text-red-500 hover:text-red-700"
+                  >
+                        Delete
+                  </button>
+                </SignedIn>
               </li>
             ))}
           </ul>

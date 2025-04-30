@@ -21,7 +21,7 @@ const Contact = () => {
             <li><span className="text-blue-500">★</span> Likedin : <a href="https://www.linkedin.com/in/dr-geetanjali-kale-17148922/" className=" text-blue-500" target="_blank" rel="noopener noreferrer">Likedin</a></li>
             <li><span className="text-blue-500">★</span>📞 <span className="ml-2">+91 98 22 477645</span></li>
             <li><span className="text-blue-500">★</span>✉️ <span className="ml-2">gvkale@pict.edu</span></li>
-            <li><span className="text-blue-500">★</span>✉️ <span className="ml-2">gilkale@gmail.com</span></li>
+            <li><span className="text-blue-500">★</span>✉️ <span className="ml-2">gvkale@gmail.com</span></li>
 
           </ul>
         </div>

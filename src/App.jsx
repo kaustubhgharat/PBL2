@@ -25,6 +25,7 @@ import { SignInPage } from "./components/SignInPage.jsx";
 import NewBookChapter from "./view/NewBookChapter.jsx";
 import PhdStudents from "./components/PhdStudents.jsx";
 import NewPhdStudent from "./view/NewPhdStudent.jsx";
+// import EditPatent from "./edit/EditPatent.jsx";
 function App() {
   return (
     <div className="bg-black">
@@ -43,14 +44,14 @@ function App() {
           <Route path="/research/new" element={<NewResearch />} />
           <Route path="/positions" element={<Position />} />
           <Route path="/book-chapters" element={<Bookchapters />} />
-
-<Route path="/book-chapters/new" element={<NewBookChapter />} />
+          <Route path="/book-chapters/new" element={<NewBookChapter />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/Conferencepublications" element={<Conferencepublications />} />
           <Route path="/Conferencepublications/new" element={<NewConferencePublication />} />
           <Route path="/talks" element={<Talks />} />
           <Route path="/talks/new" element={<NewTalk />} />
           <Route path="/patents" element={<Patents />} />
+          {/* <Route path="/patents/edit/:id" element={<EditPatent />} /> */}
           <Route path="/patents/new" element={<Newf />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>

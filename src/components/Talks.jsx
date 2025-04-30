@@ -37,6 +37,7 @@ const Talks = () => {
                 </button></SignedIn>
                 
               </li>
+              
             ))}
           </ul>
         </div>
