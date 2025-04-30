@@ -47,6 +47,9 @@ const Research = () => {
           </form>
 
           <ul className="text-gray-700 space-y-3">
+          <li><span className="text-blue-500">★</span> Google Scolar : <a href="https://scholar.google.com/citations?user=rJpGXxoAAAAJ&hl=en&oi=ao" className=" text-blue-500" target="_blank" rel="noopener noreferrer">Google Scolar</a></li>
+          <li><span className="text-blue-500">★</span> Scopus : <a href="https://www.scopus.com/authid/detail.uri?authorId=55446294200" className=" text-blue-500" target="_blank" rel="noopener noreferrer">Scopus </a></li>
+
             {listings.map((item) => (
               <li key={item._id} className="flex justify-between items-center">
                 <span>

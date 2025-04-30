@@ -52,7 +52,7 @@ const Gallery = () => {
     <div className="flex">
       <Navbar />
       <main className="w-full min-h-screen px-4 md:px-10 lg:pl-64 bg-gray-50 text-left">
-        <div className="max-w-4xl mx-auto py-8">
+        <div className="max-w-6xl mx-auto py-8">
           <h1 className="text-2xl md:text-3xl font-semibold mb-6 text-center">Gallery</h1>
 
           <SignedIn>
@@ -73,13 +73,13 @@ const Gallery = () => {
           </SignedIn>
 
           {/* Gallery Grid */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {images.map((image) => (
-              <div key={image._id} className="relative group">
+              <div key={image._id} className="relative group bg-white rounded-lg shadow-lg overflow-hidden h-80 flex items-center justify-center">
                 <img
                   src={image.url}
                   alt="Gallery item"
-                  className="w-full h-48 object-cover rounded-lg shadow"
+                  className="max-w-full max-h-full object-contain"
                 />
                 <SignedIn>
                   <button
