@@ -25,7 +25,8 @@ const Gallery = () => {
     setSelectedFile(e.target.files[0]);
   };
 
-  const handleUpload = async () => {
+  const handleUpload = async (e) => {
+    e.preventDefault();
     if (!selectedFile) return;
     const formData = new FormData();
     formData.append("image", selectedFile);
@@ -56,10 +57,10 @@ const Gallery = () => {
           <h1 className="text-2xl md:text-3xl font-semibold mb-6 text-center">Gallery</h1>
 
           <SignedIn>
-            <div className="flex flex-col sm:flex-row items-center gap-4 mb-6">
+            <form encType="multipart/form-data" className="flex flex-col sm:flex-row items-center gap-4 mb-6">
               <input
                 type="file"
-                accept="image/*"
+                accept="image/*,video/*"
                 onChange={handleFileChange}
                 className="border px-4 py-2 rounded-md w-full sm:w-72"
               />
@@ -69,18 +70,29 @@ const Gallery = () => {
               >
                 Upload Image
               </button>
-            </div>
+            </form>
           </SignedIn>
+
 
           {/* Gallery Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {images.map((image) => (
-              <div key={image._id} className="relative group bg-white rounded-lg shadow-lg overflow-hidden h-80 flex items-center justify-center">
-                <img
-                  src={image.url}
-                  alt="Gallery item"
-                  className="max-w-full max-h-full object-contain"
-                />
+              <div
+                key={image._id}
+                className="relative group bg-white rounded-lg shadow-lg overflow-hidden h-80 flex items-center justify-center"
+              >
+                {image.type === "video" ? (
+                  <video controls className="max-w-full max-h-full object-contain">
+                    <source src={image.url} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                ) : (
+                  <img
+                    src={image.url}
+                    alt="Gallery item"
+                    className="max-w-full max-h-full object-contain"
+                  />
+                )}
                 <SignedIn>
                   <button
                     onClick={() => handleDeleteImage(image._id)}
@@ -91,7 +103,9 @@ const Gallery = () => {
                 </SignedIn>
               </div>
             ))}
+
           </div>
+
         </div>
       </main>
     </div>
